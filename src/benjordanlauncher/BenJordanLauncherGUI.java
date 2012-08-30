@@ -5,7 +5,7 @@
  * 
  * Written by Andrew Brown
  * 
- * Version 1.1
+ * Version 1.2
  * 
  * A program designed to run all of the Ben Jordan games from a single launcher. 
  */
@@ -13,12 +13,14 @@ package benjordanlauncher;
 
 import java.io.File;
 import java.io.IOException;
+import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
 
 public class BenJordanLauncherGUI extends javax.swing.JFrame {
 
     BJPath bjpath = new BJPath();
     boolean isSetup = false;
+    String[] path = new String[1];
 
     /** Creates new form BenJordanLauncherGUI */
     public BenJordanLauncherGUI() {
@@ -209,13 +211,13 @@ public class BenJordanLauncherGUI extends javax.swing.JFrame {
 
 /*
  * All the jCaseXMouseClicked functions work the same, but for different games.
- * They build up a path to the specific game in a String[], create a File object 
+ * They build up a path to the specific game in the String[] path, create a File object 
  * pointing to that directory, and then call the openGame function using those
  * parameters.
  */
     
 private void jCase1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jCase1MouseClicked
-    String[] path = new String[]{bjpath.getDefaultPath() + "\\Ben Jordan 1\\"};
+    path[0] = bjpath.getDefaultPath() + "\\Ben Jordan 1\\";
     File dir = new File(path[0]);
     if (isSetup == true) {
         path[0] += "winsetup.exe";
@@ -227,7 +229,7 @@ private void jCase1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:even
 }//GEN-LAST:event_jCase1MouseClicked
 
 private void jCase1dxMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jCase1dxMouseClicked
-    String[] path = new String[]{bjpath.getDefaultPath() + "\\Ben Jordan 1 Deluxe\\"};
+    path[0] = bjpath.getDefaultPath() + "\\Ben Jordan 1 Deluxe\\";
     File dir = new File(path[0]);
     if (isSetup == true) {
         path[0] += "winsetup.exe";
@@ -239,7 +241,7 @@ private void jCase1dxMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:ev
 }//GEN-LAST:event_jCase1dxMouseClicked
 
 private void jCase2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jCase2MouseClicked
-    String[] path = new String[]{bjpath.getDefaultPath() + "\\Ben Jordan 2\\"};
+    path[0] = bjpath.getDefaultPath() + "\\Ben Jordan 2\\";
     File dir = new File(path[0]);
     if (isSetup == true) {
         path[0] += "winsetup.exe";
@@ -251,7 +253,7 @@ private void jCase2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:even
 }//GEN-LAST:event_jCase2MouseClicked
 
 private void jCase2dxMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jCase2dxMouseClicked
-    String[] path = new String[]{bjpath.getDefaultPath() + "\\Ben Jordan 2 Deluxe\\"};
+    path[0] = bjpath.getDefaultPath() + "\\Ben Jordan 2 Deluxe\\";
     File dir = new File(path[0]);
     if (isSetup == true) {
         path[0] += "winsetup.exe";
@@ -263,7 +265,7 @@ private void jCase2dxMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:ev
 }//GEN-LAST:event_jCase2dxMouseClicked
 
 private void jCase3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jCase3MouseClicked
-    String[] path = new String[]{bjpath.getDefaultPath() + "\\Ben Jordan 3\\"};
+    path[0] = bjpath.getDefaultPath() + "\\Ben Jordan 3\\";
     File dir = new File(path[0]);
     if (isSetup == true) {
         path[0] += "winsetup.exe";
@@ -275,7 +277,7 @@ private void jCase3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:even
 }//GEN-LAST:event_jCase3MouseClicked
 
 private void jCase4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jCase4MouseClicked
-    String[] path = new String[]{bjpath.getDefaultPath() + "\\Ben Jordan 4\\"};
+    path[0] = bjpath.getDefaultPath() + "\\Ben Jordan 4\\";
     File dir = new File(path[0]);
     if (isSetup == true) {
         path[0] += "winsetup.exe";
@@ -287,7 +289,7 @@ private void jCase4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:even
 }//GEN-LAST:event_jCase4MouseClicked
 
 private void jCase5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jCase5MouseClicked
-    String[] path = new String[]{bjpath.getDefaultPath() + "\\Ben Jordan 5\\"};
+    path[0] = bjpath.getDefaultPath() + "\\Ben Jordan 5\\";
     File dir = new File(path[0]);
     if (isSetup == true) {
         path[0] += "winsetup.exe";
@@ -299,7 +301,7 @@ private void jCase5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:even
 }//GEN-LAST:event_jCase5MouseClicked
 
 private void jCase6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jCase6MouseClicked
-    String[] path = new String[]{bjpath.getDefaultPath() + "\\Ben Jordan 6\\"};
+    path[0] = bjpath.getDefaultPath() + "\\Ben Jordan 6\\";
     File dir = new File(path[0]);
     if (isSetup == true) {
         path[0] += "winsetup.exe";
@@ -321,14 +323,14 @@ private void jCase6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:even
 private void jChangeDirMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jChangeDirMouseClicked
     int returnVal = jFileChooser1.showOpenDialog(this); //Open FileChooser.
 
-    if (returnVal == jFileChooser1.APPROVE_OPTION) {
-        String path = jFileChooser1.getSelectedFile().getAbsolutePath();
-        bjpath.setDefaultPath(path);
+    if (returnVal == JFileChooser.APPROVE_OPTION) {
+        String defaultPath = jFileChooser1.getSelectedFile().getAbsolutePath();
+        bjpath.setDefaultPath(defaultPath);
     }
 }//GEN-LAST:event_jChangeDirMouseClicked
 
 private void jCase7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jCase7MouseClicked
-    String[] path = new String[]{bjpath.getDefaultPath() + "\\Ben Jordan 7\\"};
+    path[0] = bjpath.getDefaultPath() + "\\Ben Jordan 7\\";
     File dir = new File(path[0]);
     if (isSetup == true) {
         path[0] += "winsetup.exe";
@@ -339,7 +341,7 @@ private void jCase7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:even
     openGame(path, dir);
 }//GEN-LAST:event_jCase7MouseClicked
 private void jCase8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jCase8MouseClicked
-    String[] path = new String[]{bjpath.getDefaultPath() + "\\Ben Jordan 8\\"};
+    path[0] = bjpath.getDefaultPath() + "\\Ben Jordan 8\\";
     File dir = new File(path[0]);
     if (isSetup == true) {
         path[0] += "winsetup.exe";
@@ -374,9 +376,9 @@ private void jToggleSetupMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRS
         if (!bjpath.getSetup()) {
             int returnVal = jFileChooser1.showOpenDialog(this); //Open FileChooser.
 
-            if (returnVal == jFileChooser1.APPROVE_OPTION) {
-                String path = jFileChooser1.getSelectedFile().getAbsolutePath();
-                bjpath.setDefaultPath(path);
+            if (returnVal == JFileChooser.APPROVE_OPTION) {
+                String defaultPath = jFileChooser1.getSelectedFile().getAbsolutePath();
+                bjpath.setDefaultPath(defaultPath);
             }
             bjpath.setSetup(true);
         }
@@ -397,9 +399,8 @@ private void jToggleSetupMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRS
             Process p = Runtime.getRuntime().exec(path, null, workingDir);
         } catch (IOException e) {
             JOptionPane.showMessageDialog(this, "Game/setup could not be opened. Are you "
-                    + "in the right directory? In the case of setup, is Windows"
+                    + "in the right directory? If you're trying to access setup, is Windows"
                     + "UAC turned on?");
-            e.printStackTrace();
         }
     }
 
@@ -435,6 +436,7 @@ private void jToggleSetupMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRS
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
 
+            @Override
             public void run() {
                 new BenJordanLauncherGUI().setVisible(true);
             }

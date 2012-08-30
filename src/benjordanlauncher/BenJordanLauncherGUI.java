@@ -5,7 +5,7 @@
  * 
  * Written by Andrew Brown
  * 
- * Version 1.2
+ * Version 1.3
  * 
  * A program designed to run all of the Ben Jordan games from a single launcher. 
  */
@@ -40,6 +40,8 @@ public class BenJordanLauncherGUI extends javax.swing.JFrame {
     private void initComponents() {
 
         jFileChooser1 = new javax.swing.JFileChooser();
+        jCover = new javax.swing.JLabel();
+        jPanel1 = new javax.swing.JPanel();
         jCase1 = new javax.swing.JButton();
         jCase1dx = new javax.swing.JButton();
         jCase2 = new javax.swing.JButton();
@@ -48,22 +50,24 @@ public class BenJordanLauncherGUI extends javax.swing.JFrame {
         jCase4 = new javax.swing.JButton();
         jCase5 = new javax.swing.JButton();
         jCase6 = new javax.swing.JButton();
-        jCover = new javax.swing.JLabel();
         jCase7 = new javax.swing.JButton();
         jCase8 = new javax.swing.JButton();
-        jChangeDir = new javax.swing.JButton();
         jToggleSetup = new javax.swing.JButton();
+        jChangeDir = new javax.swing.JButton();
 
         jFileChooser1.setAcceptAllFileFilterUsed(false);
         jFileChooser1.setCurrentDirectory(new java.io.File("C:\\"));
             jFileChooser1.setFileSelectionMode(javax.swing.JFileChooser.DIRECTORIES_ONLY);
 
             setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+            setResizable(false);
             addWindowListener(new java.awt.event.WindowAdapter() {
                 public void windowOpened(java.awt.event.WindowEvent evt) {
                     formWindowOpened(evt);
                 }
             });
+
+            jCover.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/BJTitle.png"))); // NOI18N
 
             jCase1.setText("Case 1");
             jCase1.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -121,8 +125,6 @@ public class BenJordanLauncherGUI extends javax.swing.JFrame {
                 }
             });
 
-            jCover.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/BJTitle.png"))); // NOI18N
-
             jCase7.setText("Case 7");
             jCase7.addMouseListener(new java.awt.event.MouseAdapter() {
                 public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -137,13 +139,6 @@ public class BenJordanLauncherGUI extends javax.swing.JFrame {
                 }
             });
 
-            jChangeDir.setText("Change Directory");
-            jChangeDir.addMouseListener(new java.awt.event.MouseAdapter() {
-                public void mouseClicked(java.awt.event.MouseEvent evt) {
-                    jChangeDirMouseClicked(evt);
-                }
-            });
-
             jToggleSetup.setText("Toggle Setup");
             jToggleSetup.addMouseListener(new java.awt.event.MouseAdapter() {
                 public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -151,58 +146,79 @@ public class BenJordanLauncherGUI extends javax.swing.JFrame {
                 }
             });
 
+            jChangeDir.setText("Change Directory");
+            jChangeDir.addMouseListener(new java.awt.event.MouseAdapter() {
+                public void mouseClicked(java.awt.event.MouseEvent evt) {
+                    jChangeDirMouseClicked(evt);
+                }
+            });
+
+            javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+            jPanel1.setLayout(jPanel1Layout);
+            jPanel1Layout.setHorizontalGroup(
+                jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel1Layout.createSequentialGroup()
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jCase1, javax.swing.GroupLayout.DEFAULT_SIZE, 151, Short.MAX_VALUE)
+                        .addComponent(jCase1dx, javax.swing.GroupLayout.DEFAULT_SIZE, 151, Short.MAX_VALUE)
+                        .addComponent(jCase2, javax.swing.GroupLayout.DEFAULT_SIZE, 151, Short.MAX_VALUE)
+                        .addComponent(jCase2dx, javax.swing.GroupLayout.DEFAULT_SIZE, 151, Short.MAX_VALUE)
+                        .addComponent(jCase3, javax.swing.GroupLayout.DEFAULT_SIZE, 151, Short.MAX_VALUE)
+                        .addComponent(jCase4, javax.swing.GroupLayout.DEFAULT_SIZE, 151, Short.MAX_VALUE)
+                        .addComponent(jCase5, javax.swing.GroupLayout.DEFAULT_SIZE, 151, Short.MAX_VALUE)
+                        .addComponent(jCase6, javax.swing.GroupLayout.DEFAULT_SIZE, 151, Short.MAX_VALUE)
+                        .addComponent(jCase7, javax.swing.GroupLayout.DEFAULT_SIZE, 151, Short.MAX_VALUE)
+                        .addComponent(jCase8, javax.swing.GroupLayout.DEFAULT_SIZE, 151, Short.MAX_VALUE)
+                        .addComponent(jToggleSetup, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 151, Short.MAX_VALUE)
+                        .addComponent(jChangeDir, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 151, Short.MAX_VALUE))
+                    .addContainerGap())
+            );
+            jPanel1Layout.setVerticalGroup(
+                jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel1Layout.createSequentialGroup()
+                    .addComponent(jCase1)
+                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                    .addComponent(jCase1dx)
+                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                    .addComponent(jCase2)
+                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                    .addComponent(jCase2dx)
+                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                    .addComponent(jCase3)
+                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                    .addComponent(jCase4)
+                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                    .addComponent(jCase5)
+                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                    .addComponent(jCase6)
+                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                    .addComponent(jCase7)
+                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                    .addComponent(jCase8)
+                    .addGap(105, 105, 105)
+                    .addComponent(jToggleSetup)
+                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                    .addComponent(jChangeDir, javax.swing.GroupLayout.DEFAULT_SIZE, 23, Short.MAX_VALUE))
+            );
+
             javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
             getContentPane().setLayout(layout);
             layout.setHorizontalGroup(
                 layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                     .addContainerGap()
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jToggleSetup, javax.swing.GroupLayout.DEFAULT_SIZE, 124, Short.MAX_VALUE)
-                        .addComponent(jCase8, javax.swing.GroupLayout.DEFAULT_SIZE, 124, Short.MAX_VALUE)
-                        .addComponent(jCase1dx, javax.swing.GroupLayout.DEFAULT_SIZE, 124, Short.MAX_VALUE)
-                        .addComponent(jCase1, javax.swing.GroupLayout.DEFAULT_SIZE, 124, Short.MAX_VALUE)
-                        .addComponent(jCase2, javax.swing.GroupLayout.DEFAULT_SIZE, 124, Short.MAX_VALUE)
-                        .addComponent(jCase2dx, javax.swing.GroupLayout.DEFAULT_SIZE, 124, Short.MAX_VALUE)
-                        .addComponent(jCase3, javax.swing.GroupLayout.DEFAULT_SIZE, 124, Short.MAX_VALUE)
-                        .addComponent(jCase4, javax.swing.GroupLayout.DEFAULT_SIZE, 124, Short.MAX_VALUE)
-                        .addComponent(jCase5, javax.swing.GroupLayout.DEFAULT_SIZE, 124, Short.MAX_VALUE)
-                        .addComponent(jCase6, javax.swing.GroupLayout.DEFAULT_SIZE, 124, Short.MAX_VALUE)
-                        .addComponent(jCase7, javax.swing.GroupLayout.DEFAULT_SIZE, 124, Short.MAX_VALUE)
-                        .addComponent(jChangeDir, javax.swing.GroupLayout.DEFAULT_SIZE, 124, Short.MAX_VALUE))
-                    .addGap(14, 14, 14)
-                    .addComponent(jCover, javax.swing.GroupLayout.DEFAULT_SIZE, 307, Short.MAX_VALUE))
+                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                    .addComponent(jCover)
+                    .addContainerGap())
             );
             layout.setVerticalGroup(
                 layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addContainerGap()
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jCover, javax.swing.GroupLayout.DEFAULT_SIZE, 441, Short.MAX_VALUE)
-                        .addGroup(layout.createSequentialGroup()
-                            .addComponent(jCase1)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(jCase1dx)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(jCase2)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(jCase2dx)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(jCase3)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(jCase4)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(jCase5)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(jCase6)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(jCase7)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(jCase8)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 105, Short.MAX_VALUE)
-                            .addComponent(jToggleSetup)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(jChangeDir)))
+                        .addComponent(jCover, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addContainerGap())
             );
 
@@ -321,6 +337,7 @@ private void jCase6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:even
  */
 
 private void jChangeDirMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jChangeDirMouseClicked
+    jFileChooser1.setCurrentDirectory(new File(bjpath.getDefaultPath()));
     int returnVal = jFileChooser1.showOpenDialog(this); //Open FileChooser.
 
     if (returnVal == JFileChooser.APPROVE_OPTION) {
@@ -340,6 +357,7 @@ private void jCase7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:even
 
     openGame(path, dir);
 }//GEN-LAST:event_jCase7MouseClicked
+
 private void jCase8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jCase8MouseClicked
     path[0] = bjpath.getDefaultPath() + "\\Ben Jordan 8\\";
     File dir = new File(path[0]);
@@ -408,14 +426,14 @@ private void jToggleSetupMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRS
      * @param args the command line arguments
      */
     public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
+        /* Set the Windows look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+        /* If Windows is not available, stay with the default look and feel.
          * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
          */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
+                if ("Windows".equals(info.getName())) {
                     javax.swing.UIManager.setLookAndFeel(info.getClassName());
                     break;
 
@@ -458,6 +476,7 @@ private void jToggleSetupMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRS
     private javax.swing.JButton jChangeDir;
     private javax.swing.JLabel jCover;
     private static javax.swing.JFileChooser jFileChooser1;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JButton jToggleSetup;
     // End of variables declaration//GEN-END:variables
 }

@@ -17,6 +17,7 @@
   </NonVisualComponents>
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="3"/>
+    <Property name="resizable" type="boolean" value="false"/>
   </Properties>
   <SyntheticProperties>
     <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
@@ -39,24 +40,12 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" attributes="0">
+          <Group type="102" alignment="1" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="jToggleSetup" pref="124" max="32767" attributes="0"/>
-                  <Component id="jCase8" alignment="0" pref="124" max="32767" attributes="1"/>
-                  <Component id="jCase1dx" alignment="0" pref="124" max="32767" attributes="1"/>
-                  <Component id="jCase1" alignment="0" pref="124" max="32767" attributes="1"/>
-                  <Component id="jCase2" alignment="0" pref="124" max="32767" attributes="1"/>
-                  <Component id="jCase2dx" alignment="0" pref="124" max="32767" attributes="1"/>
-                  <Component id="jCase3" alignment="0" pref="124" max="32767" attributes="1"/>
-                  <Component id="jCase4" alignment="0" pref="124" max="32767" attributes="1"/>
-                  <Component id="jCase5" alignment="0" pref="124" max="32767" attributes="1"/>
-                  <Component id="jCase6" alignment="0" pref="124" max="32767" attributes="1"/>
-                  <Component id="jCase7" alignment="0" pref="124" max="32767" attributes="1"/>
-                  <Component id="jChangeDir" alignment="0" pref="124" max="32767" attributes="0"/>
-              </Group>
-              <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
-              <Component id="jCover" pref="307" max="32767" attributes="0"/>
+              <Component id="jPanel1" max="32767" attributes="1"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="jCover" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -65,32 +54,8 @@
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="jCover" alignment="0" pref="441" max="32767" attributes="0"/>
-                  <Group type="102" alignment="0" attributes="0">
-                      <Component id="jCase1" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jCase1dx" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jCase2" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jCase2dx" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jCase3" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jCase4" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jCase5" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jCase6" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jCase7" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jCase8" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="105" max="32767" attributes="0"/>
-                      <Component id="jToggleSetup" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jChangeDir" min="-2" max="-2" attributes="0"/>
-                  </Group>
+                  <Component id="jCover" alignment="0" max="32767" attributes="1"/>
+                  <Component id="jPanel1" alignment="0" min="-2" max="-2" attributes="1"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
           </Group>
@@ -98,70 +63,6 @@
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Component class="javax.swing.JButton" name="jCase1">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Case 1"/>
-      </Properties>
-      <Events>
-        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jCase1MouseClicked"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JButton" name="jCase1dx">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Case 1 Deluxe"/>
-      </Properties>
-      <Events>
-        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jCase1dxMouseClicked"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JButton" name="jCase2">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Case 2"/>
-      </Properties>
-      <Events>
-        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jCase2MouseClicked"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JButton" name="jCase2dx">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Case 2 Deluxe"/>
-      </Properties>
-      <Events>
-        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jCase2dxMouseClicked"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JButton" name="jCase3">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Case 3"/>
-      </Properties>
-      <Events>
-        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jCase3MouseClicked"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JButton" name="jCase4">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Case 4"/>
-      </Properties>
-      <Events>
-        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jCase4MouseClicked"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JButton" name="jCase5">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Case 5"/>
-      </Properties>
-      <Events>
-        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jCase5MouseClicked"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JButton" name="jCase6">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Case 6"/>
-      </Properties>
-      <Events>
-        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jCase6MouseClicked"/>
-      </Events>
-    </Component>
     <Component class="javax.swing.JLabel" name="jCover">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
@@ -169,37 +70,158 @@
         </Property>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="jCase7">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Case 7"/>
-      </Properties>
-      <Events>
-        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jCase7MouseClicked"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JButton" name="jCase8">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Case 8"/>
-      </Properties>
-      <Events>
-        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jCase8MouseClicked"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JButton" name="jChangeDir">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Change Directory"/>
-      </Properties>
-      <Events>
-        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jChangeDirMouseClicked"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JButton" name="jToggleSetup">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Toggle Setup"/>
-      </Properties>
-      <Events>
-        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jToggleSetupMouseClicked"/>
-      </Events>
-    </Component>
+    <Container class="javax.swing.JPanel" name="jPanel1">
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" attributes="0">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="jCase1" alignment="0" pref="151" max="32767" attributes="1"/>
+                      <Component id="jCase1dx" alignment="0" pref="151" max="32767" attributes="1"/>
+                      <Component id="jCase2" alignment="0" pref="151" max="32767" attributes="1"/>
+                      <Component id="jCase2dx" alignment="0" pref="151" max="32767" attributes="1"/>
+                      <Component id="jCase3" alignment="0" pref="151" max="32767" attributes="1"/>
+                      <Component id="jCase4" alignment="0" pref="151" max="32767" attributes="1"/>
+                      <Component id="jCase5" alignment="0" pref="151" max="32767" attributes="1"/>
+                      <Component id="jCase6" alignment="0" pref="151" max="32767" attributes="1"/>
+                      <Component id="jCase7" alignment="0" pref="151" max="32767" attributes="1"/>
+                      <Component id="jCase8" alignment="0" pref="151" max="32767" attributes="1"/>
+                      <Component id="jToggleSetup" alignment="1" pref="151" max="32767" attributes="1"/>
+                      <Component id="jChangeDir" alignment="1" pref="151" max="32767" attributes="1"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <Component id="jCase1" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="jCase1dx" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="jCase2" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="jCase2dx" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="jCase3" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="jCase4" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="jCase5" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="jCase6" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="jCase7" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="jCase8" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="105" max="-2" attributes="0"/>
+                  <Component id="jToggleSetup" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="jChangeDir" pref="23" max="32767" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Component class="javax.swing.JButton" name="jCase1">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Case 1"/>
+          </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jCase1MouseClicked"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="jCase1dx">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Case 1 Deluxe"/>
+          </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jCase1dxMouseClicked"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="jCase2">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Case 2"/>
+          </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jCase2MouseClicked"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="jCase2dx">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Case 2 Deluxe"/>
+          </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jCase2dxMouseClicked"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="jCase3">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Case 3"/>
+          </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jCase3MouseClicked"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="jCase4">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Case 4"/>
+          </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jCase4MouseClicked"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="jCase5">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Case 5"/>
+          </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jCase5MouseClicked"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="jCase6">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Case 6"/>
+          </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jCase6MouseClicked"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="jCase7">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Case 7"/>
+          </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jCase7MouseClicked"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="jCase8">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Case 8"/>
+          </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jCase8MouseClicked"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="jToggleSetup">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Toggle Setup"/>
+          </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jToggleSetupMouseClicked"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="jChangeDir">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Change Directory"/>
+          </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jChangeDirMouseClicked"/>
+          </Events>
+        </Component>
+      </SubComponents>
+    </Container>
   </SubComponents>
 </Form>

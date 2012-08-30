@@ -1,7 +1,7 @@
 Note to Github users: This is the same readme included with the distributable Jar file. For the most part, 
 I've commented on the source code where appropriate.
 
-Ben Jordan Launcher 1.2
+Ben Jordan Launcher 1.3
 Made by Andrew Brown 2012
 
 The Ben Jordan games and the image used in the launcher are © 2004-2012 Francisco Gonzalez.

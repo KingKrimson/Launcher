@@ -5,7 +5,7 @@ import java.util.prefs.Preferences;
 public class BJPath {
 
     private Preferences prefs;
-    public static final String DEFAULT = "C:\\Games";
+    public static final String DEFAULT = "C:\\";
     public static final String ID = "BJPath";
     public static final String ID2 = "IsPathSet";
     
